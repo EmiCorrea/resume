@@ -4,6 +4,7 @@ import { Education } from './components/Education'
 import { Experience } from './components/Experience'
 import { Footer } from './components/Footer'
 import { Hero } from './components/Hero'
+import { LanguageSuggestionBanner } from './components/LanguageSuggestionBanner'
 import { Languages } from './components/Languages'
 import { Navbar } from './components/Navbar'
 import { Skills } from './components/Skills'
@@ -35,6 +36,7 @@ export default function App() {
   }, [currentLang, data])
 
   const toggleLang = () => {
+    localStorage.setItem('resume-lang-suggestion-dismissed', 'true')
     setCurrentLang((prev) => (prev === 'es' ? 'en' : 'es'))
   }
 
@@ -44,6 +46,11 @@ export default function App() {
         navData={data.nav}
         currentLang={currentLang}
         onToggleLang={toggleLang}
+      />
+
+      <LanguageSuggestionBanner
+        currentLang={currentLang}
+        onSwitchLang={setCurrentLang}
       />
 
       <main>
