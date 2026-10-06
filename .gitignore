@@ -20,17 +20,32 @@ dist-ssr/
 # Tool caches and generated reports
 .eslintcache
 .cache/
+.vite/
 coverage/
 *.tsbuildinfo
+*.tmp
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
-Thumbs.db
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# AI Agent knowledge base & instructions
+GEMINI.md
+AGENTS.md
+.agents/
+
